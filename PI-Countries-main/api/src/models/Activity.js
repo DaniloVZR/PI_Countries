@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
       unique: true,
       defaultValue: UUIDV4
     },
-    activity_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
