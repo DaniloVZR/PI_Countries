@@ -1,6 +1,5 @@
 const { Router } = require('express');
 const router = Router();
-const { Country, Activity } = require('../db.js');
 const { getDbInfo } = require('../controllers/api.controller.js');
 
 router.get('/', async(req, res) => {
