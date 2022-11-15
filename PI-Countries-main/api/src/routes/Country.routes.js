@@ -11,7 +11,7 @@ router.get('/', async(req, res) => {
     if (countryName.length) {
       res.status(200).send(countryName);
     } else {
-      res.status(400).send('Country not found');
+      res.status(400).json({message: 'Country not found'});
     }
   } else {
     res.status(200).send(totalCountries);
@@ -26,7 +26,7 @@ router.get('/:id', async(req, res) => {
     if (countryId.length ) {
       res.status(200).send(countryId)
     } else {
-      res.status(400).send('Country not found');
+      res.status(400).json({message: 'Country not found'});
     }
   }
 });
