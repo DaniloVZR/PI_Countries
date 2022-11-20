@@ -13,10 +13,10 @@ function App() {
       <div className='App'>
         <Switch>
           <Route exact path = '/' component = {LandingPage}/>
-          <Route exact path = '/home' component = {Home}/>
+          <Route exact path = '/Home' component = {Home}/>
           <Route exact path = '/Activity' component = {ActivityCreate}/>
           <Route exact path = '/Activities' component = {ActivitiesList}/>
-          <Route exact path = '/home/:id' component = {Detail}/>
+          <Route exact path = '/Home/:id' component = {Detail}/>
         </Switch>
       </div>
     </BrowserRouter>

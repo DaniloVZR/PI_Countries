@@ -1,0 +1,45 @@
+.landingPage {
+  background-image: url('../img/landingpage.jpg');
+  background-size: cover;
+  background-position: center 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing__box {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgb(237, 237, 237, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(130, 130, 130, 0.37);
+  backdrop-filter: blur(1px);
+}
+
+.landing__title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.landing__button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  background-color: #aeaeae;
+  border: none;
+  border-radius: .8rem;
+  margin-top: 2rem;
+  padding: .6rem;
+  width: 300px;
+  transition: .4s;
+}
+
+.landing__button:hover {
+  cursor: pointer;
+  background-color: #dedede;
+  transition: .4s;
+}
