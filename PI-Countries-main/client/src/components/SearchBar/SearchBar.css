@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form__input {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border: none;
+  border-bottom: 1px solid white;
+  background: none;
+  height: 30px;
+  outline: none;
+}
+
+.form__input::placeholder {
+  color: #aeaeae;
+}
+
+.form__button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: white;
+  border: none;
+  border-radius: .6rem;
+  transition: .6s;
+  padding: .3rem 1rem;
+}
+
+.form__button:hover {
+  cursor: pointer;
+  background-color: #aeaeae;
+}

@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+  box-shadow: 0px 10px 10px -6px #0086d8;
+}
+
+.navbar__title {
+  color: white;
+}
+
+.navbar__options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar__link {
+  color: black;
+  background-color: white;
+  border-radius: .6rem;
+  padding: .3rem 1rem;
+  text-decoration: none;
+  transition: .6s;
+}
+
+.navbar__link:hover {
+  background-color: #aeaeae;
+}

@@ -1,15 +1,16 @@
-import { useState } from 'react';
-import { }
+import React, { useState } from 'react';
+import {useDispatch} from 'react-redux';
 import { searchCountries } from '../../redux/actions/index.js';
+import './SearchBar.css'
 
 export default function SearchBar() {
   const [search, setSearch] = useState('');
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
   function onSubmit(e) {
     e.preventDefault();
     if (search.length === 0) return alert('You should introduce a country');
-    dispatch(searchCountries(search))
+    //dispatch(searchCountries(search))
     setSearch('')
   }
 
@@ -19,10 +20,10 @@ export default function SearchBar() {
   }
 
   return (
-    <div className='formSearchBar'>
-      <form onSubmit={onSubmit}>
-        <input className='inputCountry' type='text' placeholder='Write a country' onChange={onInputChange} value={search}/>
-        <input className='inputbutton' type='submit' value=''/>
+    <div>
+      <form className='form' onSubmit={onSubmit}>
+        <input className='form__input' type='text' placeholder='Write a country' onChange={onInputChange} value={search}/>
+        <input className='form__button' type='submit' value='Submit'/>
       </form>
     </div>
   )
