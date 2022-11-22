@@ -1,3 +1,43 @@
-.title {
+.cardsContainer {
   color: white;
+}
+
+.Filter__Container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0
+}
+
+.Filter__Option {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  color: black;
+  background-color: white;
+  border-radius: .6rem;
+  padding: .3rem 1rem;
+  text-decoration: none;
+  transition: .6s;
+  outline: none;
+}
+
+.Filter__Option:hover {
+  cursor: pointer;
+  background-color: #aeaeae;
+}
+
+.cardsBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.Card {
+  margin: 0 auto;
+}
+
+.Card__Link {
+  color: black;
+  text-decoration: none;
 }

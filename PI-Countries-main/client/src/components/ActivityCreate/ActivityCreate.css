@@ -1,0 +1,85 @@
+.Activity__Container {
+  background-image: url('../img/landingpage.jpg');
+  background-size: cover;
+  background-position: center 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.Activity__Box {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgb(237, 237, 237, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(130, 130, 130, 0.37);
+  backdrop-filter: blur(1px);
+  width: 500px;
+  margin: 4rem auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Form__Title {
+  margin: 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.Form__Input {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 5rem;
+  margin-bottom: 1rem;  
+}
+
+.Form__Field {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 30px;
+  padding: 0 .5rem;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.Form__Field::placeholder {
+  color: #000
+}
+
+.error {
+  color: red;
+  background-color: #aeaeae;
+  width: 70%;
+  margin: 1.3rem auto;
+  padding: .6rem;
+  border-radius: .6rem;
+}
+
+.Form__Range {
+  width: 50%;
+}
+
+.Form__Select {
+  width: 100%;
+  background-color: #aeaeae;
+  outline: none;
+  border-radius: .6rem;
+  padding: 0 .5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Form__Button {
+  background-color: white;
+  border: none;
+  border-radius: .6rem;
+  padding: .5rem;
+  transition: .6s;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Form__Button:hover {
+  background-color: #aeaeae;
+  cursor: pointer;
+}
+

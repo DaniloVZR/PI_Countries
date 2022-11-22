@@ -60,10 +60,10 @@ export default function Cards () {
 
   return (
     <div className='cardsContainer'>
-      <div className='filterContainer'>
-        <button id='b1' className='filterAndOrder' onClick={(e) => reloadButton(e)}>Reload</button>
+      <div className='Filter__Container'>
+        <button id='b1' className='Filter__Option' onClick={(e) => reloadButton(e)}>Refresh</button>
           <select 
-            className='filterAndOrder'
+            className='Filter__Option'
             onChange={(e) => {
               handleSort(e);
             }}
@@ -74,7 +74,7 @@ export default function Cards () {
           </select>
 
           <select 
-            className='filterAndOrder'
+            className='Filter__Option'
             onChange={(e) => {
               handleSort2(e);
             }}
@@ -85,7 +85,7 @@ export default function Cards () {
           </select>
 
           <select 
-            className='filterAndOrder'
+            className='Filter__Option'
             onChange={(e) => handleFilterActivity(e)}
           >
             <option value='todos'>Activities</option>
@@ -95,7 +95,7 @@ export default function Cards () {
           </select>
 
           <select
-            className='filterAndOrder'
+            className='Filter__Option'
             onChange={(e) => handleFilterContinent(e)}
           >
             <option value='continent'>Continentes</option>
@@ -114,13 +114,13 @@ export default function Cards () {
         countriesPerPage={countriesPerPage}
         countries={countries.length}
         paginado={paginado}
-      />
+      /> 
 
       <div className='cardsBox'>
         {currentCountry?.map((country) => {
           return (
-            <div key={country.id}>
-              <Link to={'/home/' + country.id}>
+            <div className='Card' key={country.id}>
+              <Link className="Card__Link" to={'/home/' + country.id}>
                 <Card
                   name={country.name}
                   flag={country.flag}
@@ -132,7 +132,7 @@ export default function Cards () {
               </div> 
           );
         })}
-      </div>
+      </div> 
     </div>
   )
 }

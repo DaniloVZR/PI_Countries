@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import {useDispatch} from 'react-redux';
-import { searchCountries } from '../../redux/actions/index.js';
+import { useDispatch } from 'react-redux';
+import { searchCountries } from '../../redux/actions/index';
 import './SearchBar.css'
 
 export default function SearchBar() {
   const [search, setSearch] = useState('');
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   function onSubmit(e) {
     e.preventDefault();
     if (search.length === 0) return alert('You should introduce a country');
-    //dispatch(searchCountries(search))
+    dispatch(searchCountries(search))
     setSearch('')
   }
 

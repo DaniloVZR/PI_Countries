@@ -1,0 +1,44 @@
+.Detail {
+  background-image: url('../img/landingpage.jpg');
+  background-size: cover;
+  background-position: center 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Detail__Box {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 2rem 0;
+}
+
+.Detail__Country {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgb(237, 237, 237, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(130, 130, 130, 0.37);
+  backdrop-filter: blur(1px);
+  width: max-content;
+  max-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Detail__Img__Cont {
+  margin: auto 0;
+  display: flex;
+}
+
+.Detail__Img {
+  max-width: 100%;
+}
+
+.Detail__Info {
+  font-size: .7rem;
+}
