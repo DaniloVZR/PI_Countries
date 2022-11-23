@@ -57,7 +57,7 @@ export default function Detail(props) {
             </div>
 
           </div> : <div className='loading'>
-            <p> Loading... </p>
+            <h1> Loading... </h1>
           </div>
 
       }</div>

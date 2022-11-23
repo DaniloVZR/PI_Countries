@@ -1,9 +1,10 @@
-.cardsContainer {
+.Cards__Container {
   color: white;
 }
 
 .Filter__Container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin: 2rem 0
@@ -26,7 +27,7 @@
   background-color: #aeaeae;
 }
 
-.cardsBox {
+.Cards__Box {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;

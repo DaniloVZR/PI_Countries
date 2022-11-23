@@ -136,11 +136,11 @@ export default function ActivityCreate() {
               value={input.season}
               onChange={(e) => handleChange(e)}
             >
-              <option className="op" disabled selected>Season</option>
-              <option className="op" value={WINTER}>Winter</option>
-              <option className="op" value={SUMMER}>Summer</option>
-              <option className="op" value={AUTUM}>Autum</option>
-              <option className="op" value={SPRING}>Spring</option>
+              <option>Season</option>
+              <option value={WINTER}>Winter</option>
+              <option value={SUMMER}>Summer</option>
+              <option value={AUTUM}>Autum</option>
+              <option value={SPRING}>Spring</option>
             </select>
             {errors.season && <p className="error">{errors.season}</p>}
           </div>
@@ -155,11 +155,11 @@ export default function ActivityCreate() {
             </select>
           </div>
 
-          <div className="textArea">
+          <div>
             {input.countryId.map((country) => (
-              <div className="countrieAndButton">
-                <input className="btnDelete" type='button' value='X' onClick={() => handleDelete(country)}/>
-                <p className="pOfCountry">{country}</p>
+              <div>
+                <input type='button' value='X' onClick={() => handleDelete(country)}/>
+                <p>{country}</p>
               </div>
             ))}
           </div>

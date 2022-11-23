@@ -6,8 +6,20 @@
   box-shadow: 0px 10px 10px -6px #0086d8;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .navbar__options {
+    margin: 1rem 1rem;
+  }
+}
+
 .navbar__title {
   color: white;
+  text-decoration: none;
 }
 
 .navbar__options {

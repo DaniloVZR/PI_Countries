@@ -1,6 +1,7 @@
-.home-container {
+.activityList__Container {
   background-image: url(../img/landingpage.jpg);
-  background-position: center 0;
+  height: 100%;
+  background-position: center center;
   background-size: cover;
   background-attachment: fixed;
 }

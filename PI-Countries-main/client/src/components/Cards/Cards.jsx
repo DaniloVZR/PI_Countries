@@ -59,7 +59,7 @@ export default function Cards () {
   }, [dispatch]);
 
   return (
-    <div className='cardsContainer'>
+    <div className='Cards__Container'>
       <div className='Filter__Container'>
         <button id='b1' className='Filter__Option' onClick={(e) => reloadButton(e)}>Refresh</button>
           <select 
@@ -68,7 +68,7 @@ export default function Cards () {
               handleSort(e);
             }}
           >
-            <option disabled selected>Filter By Alphabetic Orden</option>
+            <option>Filter By Alphabetic Orden</option>
             <option value={ASC}>A - Z</option>
             <option value={DESC}>Z - A</option>
           </select>
@@ -79,7 +79,7 @@ export default function Cards () {
               handleSort2(e);
             }}
           >
-            <option disabled selected>Filter By Population</option>
+            <option>Filter By Population</option>
             <option value={HIGHER_POPULATION}>HIGHER POPULATION</option>
             <option value={LESS_POPULATION}>LOWER POPULATION</option>
           </select>
@@ -98,8 +98,7 @@ export default function Cards () {
             className='Filter__Option'
             onChange={(e) => handleFilterContinent(e)}
           >
-            <option value='continent'>Continentes</option>
-            <option value={ALL}>Todos</option>
+            <option value={ALL}>All Continents</option>
             <option value={ALL_AFRICA}>Africa</option>
             <option value={ALL_N_AMERICA}>North America</option>
             <option value={ALL_S_AMERICA}>South America</option>
@@ -116,7 +115,7 @@ export default function Cards () {
         paginado={paginado}
       /> 
 
-      <div className='cardsBox'>
+      <div className='Cards__Box'>
         {currentCountry?.map((country) => {
           return (
             <div className='Card' key={country.id}>

@@ -18,7 +18,7 @@ export function getCountries () {
 export function searchCountries(search) {
   return async function (dispatch) {
     try {
-      var json = await axios.get('http://localhost:3001/countries?name' + search)
+      var json = await axios.get('http://localhost:3001/countries?name=' + search)
       return dispatch({
         type: SEARCH_COUNTRIES,
         payload: json.data

@@ -1,7 +1,7 @@
 import React from "react";
 import '../ActivitiesList/ActivitiesList.jsx'
 
-export default function ({ name, duration, season, difficulty, countryId }) {
+export default function Activity ({ name, duration, season, difficulty, countryId }) {
   return (
     <div className='divActivityContainter'>
       <h2>{name}</h2>

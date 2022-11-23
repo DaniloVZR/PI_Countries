@@ -1,6 +1,7 @@
 .Paginado__List {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1rem;
@@ -14,6 +15,7 @@
   color: black;
   background-color: white;
   padding: .5rem;
+  border: none;
   border-radius:  .6rem;
   transition: .6s;
 }

@@ -42,3 +42,8 @@
 .Detail__Info {
   font-size: .7rem;
 }
+
+.loading {
+  font-size: 3rem;
+  color: #fff;
+}

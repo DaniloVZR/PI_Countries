@@ -2,6 +2,11 @@
   text-align: center;
   max-width: 100%;
   width: 100%;
+  background-image: url(../src/components/img/landingpage.jpg);
+  height: 100vh;
+  background-position: center 0;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .App-logo {
