@@ -61,7 +61,7 @@ export default function Cards () {
   return (
     <div className='Cards__Container'>
       <div className='Filter__Container'>
-        <button id='b1' className='Filter__Option' onClick={(e) => reloadButton(e)}>Refresh</button>
+        <button id='b1' className='Filter__Option' onClick={(e) => reloadButton(e)}>Reload</button>
           <select 
             className='Filter__Option'
             onChange={(e) => {
