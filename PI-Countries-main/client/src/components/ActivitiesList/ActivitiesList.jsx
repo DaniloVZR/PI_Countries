@@ -12,10 +12,10 @@ export default function ActivityList() {
         <NavBar/>
       </div>
 
-      <div className="activityCardListContainer">{
+      <div className="Activity__Cards__List">{
         activities?.map((acc) => {
           return (
-            <div className="ActivityCardListContainer">
+            <div className="Activity__Card">
               <Activity
                 name={acc.name}
                 duration={acc.duration}

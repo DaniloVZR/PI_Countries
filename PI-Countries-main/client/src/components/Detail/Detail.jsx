@@ -38,14 +38,15 @@ export default function Detail(props) {
                 <h2>Area: {countriesDetail[0].area} km2</h2>
                 <h2>Population: {countriesDetail[0].population}</h2>
               </div>
-            </div>
-            <div className='activitiesDetail'>  {countriesDetail[0].activities?.map(el => {
+            </div>       
+
+            <div className='Detail__Activities'>  {countriesDetail[0].activities?.map(el => {
               return (
                 <div>
-                  <Link className='linkDetail' to='/activities'>
-                    <h2>Activity</h2>
+                  <Link className='Link__Detail' to='/activities'>
+                    <h1>Activity</h1>
                   </Link>
-                  <div className='obj3Detail'>
+                  <div>
                     <h3>{el.name}</h3>
                     <h3>Difficulty: {el.difficulty}</h3>
                     <h3>Duration: {el.duration}</h3>

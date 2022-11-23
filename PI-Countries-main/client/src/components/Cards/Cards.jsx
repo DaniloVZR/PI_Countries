@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getCountries, filterByContinent, filterByActivity, orderByName, orderByPopulation, getActivities } from "../../redux/actions/index";
-import { LESS_POPULATION, HIGHER_POPULATION, ALL, ALL_AFRICA, ALL_N_AMERICA, ALL_S_AMERICA, ALL_ANTARTIDA, ALL_ASIA, ALL_EUROPE, ALL_OCEANIA, ASC, DESC } from "../../const/Const";
+import { LESS_POPULATION, HIGHER_POPULATION, ALL, ALL_AFRICA, ALL_N_AMERICA, ALL_S_AMERICA, ALL_ASIA, ALL_EUROPE, ALL_OCEANIA, ASC, DESC } from "../../const/Const";
 import Card from '../Card/Card.jsx';
 import Paginado from '../Paginado/Paginado.jsx';
 import './Cards.css';
@@ -102,7 +102,6 @@ export default function Cards () {
             <option value={ALL_AFRICA}>Africa</option>
             <option value={ALL_N_AMERICA}>North America</option>
             <option value={ALL_S_AMERICA}>South America</option>
-            <option value={ALL_ANTARTIDA}>Antartida</option>
             <option value={ALL_ASIA}>Asia</option>
             <option value={ALL_EUROPE}>Europe</option>
             <option value={ALL_OCEANIA}>Oceania</option>

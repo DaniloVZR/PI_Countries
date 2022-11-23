@@ -19,15 +19,15 @@
 .Detail__Country {
   padding: 1.5rem;
   border-radius: 1rem;
-  background-color: rgb(237, 237, 237, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 32px 0 rgba(130, 130, 130, 0.37);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
   width: max-content;
   max-height: max-content;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: 3rem;
 }
 
 .Detail__Img__Cont {
@@ -41,6 +41,27 @@
 
 .Detail__Info {
   font-size: .7rem;
+}
+
+.Link__Detail {
+  color: black;
+  text-decoration: none;
+}
+
+.Link__Detail:hover {
+  background-color: #aeaeae;
+}
+
+.Detail__Activities {
+  background-color: white;
+  padding: .8rem;
+  border-radius: .8rem;
+  transition: .6s;
+}
+
+.Detail__Activities:hover {
+  cursor: pointer;
+  background-color: #aeaeae;
 }
 
 .loading {

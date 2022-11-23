@@ -1,9 +1,9 @@
 .Card_Box {
   padding: 1.5rem;
   border-radius: 1rem;
-  background-color: rgb(237, 237, 237, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 32px 0 rgba(130, 130, 130, 0.37);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
   width: 300px;
   height: 400px;
   transition: .5s;

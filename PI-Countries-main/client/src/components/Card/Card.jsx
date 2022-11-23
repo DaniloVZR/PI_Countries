@@ -4,7 +4,7 @@ import './Card.css';
 export default function Card ({ name, flag, continent, capital, population, id }) {
   return (
     <div className="Card_Box">
-      <h3 className="Card__Name">{name}</h3>
+      <h2 className="Card__Name">{name}</h2>
       <img className='Card__Img' src={flag} alt={name}/>
       <div className='Card__Info__Container'>
         <h5 className="Card__Info">Capital: {capital}</h5>

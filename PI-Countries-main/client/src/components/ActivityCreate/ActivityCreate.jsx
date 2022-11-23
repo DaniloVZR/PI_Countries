@@ -91,7 +91,7 @@ export default function ActivityCreate() {
 
       <div className='Activity__Box'>        
         <form className="Activity__Form" onSubmit={handleSubmit}>
-          <h3 className="Form__Title">Crea una Actividad</h3>
+          <h3 className="Form__Title">Plan your activity</h3>
           <div className="Form__Input">
             <label className="LabelActivity">Activity</label>
             <input
@@ -158,7 +158,7 @@ export default function ActivityCreate() {
           <div>
             {input.countryId.map((country) => (
               <div>
-                <input type='button' value='X' onClick={() => handleDelete(country)}/>
+                <input className="Form__Button" type='button' value='X' onClick={() => handleDelete(country)}/>
                 <p>{country}</p>
               </div>
             ))}
