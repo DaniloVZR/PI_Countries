@@ -1,11 +1,11 @@
-const {Country, Activity} = require('../db.js');
-const axios = require('axios');
+const { Country, Activity } = require("../db.js");
+const axios = require("axios");
 
 // Prueba de GitHub
 
 const getInfo = async () => {
   try {
-    const url = await axios.get('https://restcountries.com/v3/all')
+    const url = await axios.get("https://restcountries.com/v3/all");
     const apiInfo = await url.data.map((country) => {
       return {
         id: country.cca3,
@@ -15,16 +15,16 @@ const getInfo = async () => {
         capital: country.capital,
         subregion: country.subregion,
         area: country.area,
-        population: country.population
-      }
+        population: country.population,
+      };
     });
-  
+
     const save = () => {
-      apiInfo.map(e => {
+      apiInfo.map((e) => {
         Country.findOrCreate({
           where: {
             name: e.name,
-            id: e.id
+            id: e.id,
           },
           defaults: {
             continent: e.continent,
@@ -32,17 +32,18 @@ const getInfo = async () => {
             capital: e.capital,
             subregion: e.subregion,
             area: e.area,
-            population: e.population
+            population: e.population,
           },
-        }).catch((error) => {console.log(error)})
-      })
-    }
+        }).catch((error) => {
+          console.log(error);
+        });
+      });
+    };
     save();
     return apiInfo;
   } catch (error) {
-    return res.status(400).json({ message: error.message })
+    return res.status(400).json({ message: error.message });
   }
-
 };
 
 const getDbInfo = async () => {
@@ -51,15 +52,15 @@ const getDbInfo = async () => {
     const aux = await Country.findAll({
       include: {
         model: Activity,
-        attributes: ['name', 'difficulty', 'duration', 'season'],
+        attributes: ["name", "difficulty", "duration", "season"],
         through: {
           attributes: [],
-        }
-      }
-    })
+        },
+      },
+    });
     return aux;
   } catch (error) {
-    return res.status(400).json({ message: error.message })
+    return res.status(400).json({ message: error.message });
   }
 };
 
@@ -68,11 +69,11 @@ const getActivities = async () => {
     const get = await Activity.findAll();
     return get;
   } catch (error) {
-    return res.status(400).json({ message: error.message })
+    return res.status(400).json({ message: error.message });
   }
-}
+};
 
 module.exports = {
   getDbInfo,
-  getActivities
+  getActivities,
 };

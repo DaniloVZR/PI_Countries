@@ -7,13 +7,10 @@ export default function NavBar() {
   return (
     <nav>
       <div className="navbar">
-        <div>
-          <Link className="navbar__title" to='/Home'>
-            <h1>Henry Countries</h1>
-          </Link>
-        </div>
+        <Link className="navbar__title" to='/Home'>
+          <h1>Henry Countries</h1>
+        </Link>
         <div className="navbar__options">
-          
           <Link className='navbar__link' to='/Activity'>Create Activity</Link>
           <Link className='navbar__link' to='/Activities'>Activities List</Link>
           <SearchBar/>

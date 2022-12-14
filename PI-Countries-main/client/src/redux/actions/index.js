@@ -1,105 +1,117 @@
-import axios from 'axios';
-import { RESET, ORDER_BY_POPULATION, FILTER_BY_ACTIVITIES, FILTER_BY_CONTINENT, GET_COUNTRIES, ORDER_BY_NAME, SEARCH_COUNTRIES, GET_ACTIVITIES, POST_ACTIVITIES, DETAIL } from '../../const/Const'
+import axios from "axios";
+import {
+  RESET,
+  ORDER_BY_POPULATION,
+  FILTER_BY_ACTIVITIES,
+  FILTER_BY_CONTINENT,
+  GET_COUNTRIES,
+  ORDER_BY_NAME,
+  SEARCH_COUNTRIES,
+  GET_ACTIVITIES,
+  POST_ACTIVITIES,
+  DETAIL,
+} from "../../const/Const";
 
-export function getCountries () {
+export function getCountries() {
   return async function (dispatch) {
     try {
-      var json = await axios.get('http://localhost:3001/countries')
+      var json = await axios.get("http://localhost:3001/countries");
       return dispatch({
         type: GET_COUNTRIES,
-        payload: json.data
+        payload: json.data,
       });
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 }
 
 export function searchCountries(search) {
   return async function (dispatch) {
     try {
-      var json = await axios.get('http://localhost:3001/countries?name=' + search)
+      var json = await axios.get(
+        "http://localhost:3001/countries?name=" + search
+      );
       return dispatch({
         type: SEARCH_COUNTRIES,
-        payload: json.data
+        payload: json.data,
       });
     } catch (error) {
-      alert('Country not found')
-      console.log(error);
+      alert("Country not found");
     }
-  }
+  };
 }
 
 export function filterByContinent(payload) {
   return {
     type: FILTER_BY_CONTINENT,
-    payload
-  }
+    payload,
+  };
 }
 
 export function filterByActivity(payload) {
   return {
     type: FILTER_BY_ACTIVITIES,
-    payload
-  }
+    payload,
+  };
 }
 
 export function orderByName(payload) {
   return {
     type: ORDER_BY_NAME,
-    payload
-  }
+    payload,
+  };
 }
 
 export function orderByPopulation(payload) {
   return {
     type: ORDER_BY_POPULATION,
-    payload
-  }
+    payload,
+  };
 }
 
 export function getActivities() {
   return async function (dispatch) {
     try {
-      let json = await axios.get('http://localhost:3001/activity');
+      let json = await axios.get("http://localhost:3001/activity");
       return dispatch({
         type: GET_ACTIVITIES,
-        payload: json.data
-      })
+        payload: json.data,
+      });
     } catch (error) {
-      alert ('There is not activities')
+      alert("There is not activities");
       console.log(error);
     }
-  }
+  };
 }
 
 export function postActivities(payload) {
   return async function (dispatch) {
-    await axios.post('http://localhost:3001/activity', payload);
+    await axios.post("http://localhost:3001/activity", payload);
     return dispatch({
-      type: POST_ACTIVITIES
-    })
-  }
+      type: POST_ACTIVITIES,
+    });
+  };
 }
 
 export function getDetail(id) {
   return async function (dispatch) {
     try {
-      let json = await axios.get('http://localhost:3001/countries/' + id);
-      return dispatch ({
+      let json = await axios.get("http://localhost:3001/countries/" + id);
+      return dispatch({
         type: DETAIL,
-        payload: json.data
-      })
+        payload: json.data,
+      });
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 }
 
 export function restartDetail() {
   return (dispatch) => {
-    dispatch({ 
-      type: RESET
-    })
-  }
+    dispatch({
+      type: RESET,
+    });
+  };
 }
